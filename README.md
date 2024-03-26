@@ -216,6 +216,8 @@ Para excluir seu espaço de trabalho:
 
 No portal do Azure, na página Grupos de recursos, abra o grupo de recursos especificado ao criar seu espaço de trabalho do Aprendizado de Máquina do Azure.
 Clique em Excluir grupo de recursos, digite o nome do grupo de recursos para confirmar que deseja excluí-lo e selecione Excluir.
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/c8591632-8d0a-4722-b08b-44616763b7d8)
+
 
 ![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/200af141-275e-43ea-aa35-ecea0f45f10d)
 
