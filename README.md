@@ -181,15 +181,44 @@ Na guia Modelo para obter o melhor modelo treinado pelo seu trabalho de aprendiz
 Aguarde o início da implantação, isso pode levar alguns segundos. O status de implantação para o ponto de extremidade de aluguel de previsão será indicado na parte principal da página como "Em execução".
 Aguarde até que o status "Implantar" seja alterado para "Bem-sucedido". Isso pode levar de 5 a 10 minutos.
 
-#🔎 Testar Modelo de Teste 
+#🔎 Testar Modelo
 
 Agora você pode testar seu serviço implantado.
-
 No estúdio do Aprendizado de Máquina do Azure, no menu à esquerda, selecione Pontos de extremidade e abra o ponto de extremidade em tempo real de aluguéis de previsão.
 ![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/a7741cbb-0a59-405b-9d99-e6079b9e0e2a)
 
 Na página de ponto de extremidade em tempo real de aluguéis de previsão, exiba a guia Teste.
 
 No painel Dados de entrada para testar o ponto de extremidade, substitua o modelo JSON pelos seguintes dados de entrada:
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/8d31373c-73a5-4fe7-836c-f320701b6778)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/ceae2575-9f19-4785-b393-c24ed2502193)
+
+Clique no botão Testar.
+
+Analise os resultados do teste, que incluem um número previsto de aluguéis com base nos recursos de entrada - semelhante a este:
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/79d1531d-b316-4bac-a5b9-f9c695d12758)
+
+Vamos rever o que você fez. Você usou um conjunto de dados de dados históricos de aluguel de bicicletas para treinar um modelo. O modelo prevê o número de aluguéis de bicicletas esperados em um determinado dia, com base em características sazonais e meteorológicas.
+
+# 🧹Limpeza
+
+O serviço Web que você criou está hospedado em uma Instância de Contêiner do Azure. Se você não pretende experimentá-lo mais, exclua o ponto de extremidade para evitar o uso desnecessário do Azure.
+
+No estúdio do Aprendizado de Máquina do Azure, na guia Pontos de extremidade, selecione o ponto de extremidade de aluguel de previsão. Em seguida, selecione Excluir e confirme que deseja excluir o ponto de extremidade.
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/d182f5d3-8bf6-4708-839e-0f4d1b93d67a)
+
+A exclusão da computação garante que sua assinatura não será cobrada por recursos de computação. No entanto, será cobrado um pequeno valor pelo armazenamento de dados, desde que o espaço de trabalho do Aprendizado de Máquina do Azure exista em sua assinatura. Se você tiver terminado de explorar o Aprendizado de Máquina do Azure, poderá excluir o espaço de trabalho do Aprendizado de Máquina do Azure e os recursos associados.
+
+Para excluir seu espaço de trabalho:
+
+No portal do Azure, na página Grupos de recursos, abra o grupo de recursos especificado ao criar seu espaço de trabalho do Aprendizado de Máquina do Azure.
+Clique em Excluir grupo de recursos, digite o nome do grupo de recursos para confirmar que deseja excluí-lo e selecione Excluir.
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/200af141-275e-43ea-aa35-ecea0f45f10d)
+
+
 
 
