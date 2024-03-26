@@ -75,54 +75,121 @@ Neste desafio vamos utilizar um conjunto de dados pre-existentes com detalhes hi
 
    *URL da Web:
       * URL da Web: https://aka.ms/bike-rentals
+      *Ignorar validação de dados: não selecione
 
 ![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/a93915c5-5ce4-4766-9ce5-334afacdbadb)
       
-Ignorar validação de dados: não selecione
-Configurações:
-Formato de arquivo: Delimitado
-Delimitador: Vírgula
-Codificação: UTF-8
-Cabeçalhos de coluna: Somente o primeiro arquivo tem cabeçalhos
-Pular linhas: Nenhum
-O conjunto de dados contém dados de várias linhas: não selecione
-Esquema:
-Incluir todas as colunas diferentes de Caminho
-Revisar os tipos detectados automaticamente
-Selecione Criar. Depois que o conjunto de dados for criado, selecione o conjunto de dados de aluguel de bicicletas para continuar a enviar o trabalho de ML automatizado.
+5. Configurações:
+      * Formato de arquivo: Delimitado
+      * Delimitador: Vírgula
+      * Codificação: UTF-8
+      * Cabeçalhos de coluna: Somente o primeiro arquivo tem cabeçalhos
+      * Pular linhas: Nenhum
+      * O conjunto de dados contém dados de várias linhas: não selecione
 
-Configurações da tarefa:
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/862666ec-c4ec-41d6-be7a-f9efe73cef4e)
 
-Tipo de tarefa: Regressão
-Conjunto de dados: aluguel de bicicletas
-Coluna de destino: Aluguéis (inteiro)
-Definições de configuração adicionais:
-Métrica primária: Erro quadrático médio da raiz normalizada
-Explicar melhor modelo: Não selecionado
-Use todos os modelos suportados: Nãoselecionado. Você restringirá o trabalho para tentar apenas alguns algoritmos específicos.
-Modelos permitidos: selecione apenas RandomForest e LightGBM — normalmente você gostaria de tentar o maior número possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho.
-Limites: expanda esta seção
-Máximo de tentativas: 3
-Máximo de tentativas simultâneas: 3
-Nós máximos: 3
-Limiar de pontuação métrica: 0,085 (de modo que, se um modelo atingir uma pontuação métrica quadrática média normalizada de 0,085 ou menos, o trabalho termina.)
-Tempo limite: 15
-Tempo limite de iteração: 15
-Habilitar rescisão antecipada: Selecionado
-Validação e teste:
-Tipo de validação: Divisão de validação de trem
-Porcentagem de dados de validação: 10
-Conjunto de dados de teste: Nenhum
-Computação:
+6. Esquema:
+      * Incluir todas as colunas diferentes de Caminho
+      * Revisar os tipos detectados automaticamente
+      * Selecione Criar. Depois que o conjunto de dados for criado, selecione o conjunto de dados de aluguel de bicicletas para continuar a enviar o trabalho de ML automatizado.
 
-Selecione o tipo de computação: Serverless
-Tipo de máquina virtual: CPU
-Camada de máquina virtual: Dedicado
-Tamanho da máquina virtual: Standard_DS3_V2*
-Número de instâncias: 1
-* Se sua assinatura restringir os tamanhos de VM disponíveis para você, escolha qualquer tamanho disponível.
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/c4c4671d-963d-410e-8ecd-47d2e42192f8)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/705483ed-1066-4da4-b512-4c6eac999a1c)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/0a118fb4-82d5-4bae-b866-782752618b53)
+
+
+7. Configurações da tarefa:
+
+      * Tipo de tarefa: Regressão
+      * Conjunto de dados: aluguel de bicicletas
+      * Coluna de destino: Aluguéis (inteiro)
+      * Definições de configuração adicionais:
+      * Métrica primária: Erro quadrático médio da raiz normalizada
+      * Explicar melhor modelo: Não selecionado
+      * Use todos os modelos suportados: Nãoselecionado. Você restringirá o trabalho para tentar apenas alguns algoritmos específicos.
+      * Modelos permitidos: selecione apenas RandomForest e LightGBM — normalmente você gostaria de tentar o maior número possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho.
+      
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/e7d6562f-e88a-441b-9dfd-02b710e023c1)
+
+* Limites: expanda esta seção
+      * Máximo de tentativas: 3
+      * Máximo de tentativas simultâneas: 3
+      * Nós máximos: 3
+      * Limiar de pontuação métrica: 0,085 (de modo que, se um modelo atingir uma pontuação métrica quadrática média normalizada de 0,085 ou menos, o trabalho termina.)
+      * Tempo limite: 15
+      * Tempo limite de iteração: 15
+      * Habilitar rescisão antecipada: Selecionado
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/36f2f669-4b3c-409e-b7d0-d29994ba6f18)
+
+8. Validação e teste:
+      * Tipo de validação: Divisão de validação de trem
+      * Porcentagem de dados de validação: 10
+      * Conjunto de dados de teste: Nenhum
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/ec8760b0-924d-4554-be7b-fd1b2d5bf904)
+
+
+9. Envio do trabalho 
+      * Selecione o tipo de computação: Serverless
+      * Tipo de máquina virtual: CPU
+      * Camada de máquina virtual: Dedicado
+      *   Tamanho da máquina virtual: Standard_DS3_V2¹
+      *Número de instâncias: 1
+
+¹Se sua assinatura restringir os tamanhos de VM disponíveis para você, escolha qualquer tamanho disponível.
 
 Envie o trabalho de treinamento. Ele começa automaticamente.
 
-Aguarde a conclusão do trabalho. Pode demorar um pouco – agora pode ser um bom momento para uma pausa para o café!
+Aguarde a conclusão do trabalho. Pode demorar um pouco.
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/ec3bf680-b8f7-463e-9bf1-f55c19202114)
+
+Quando o trabalho de aprendizado de máquina automatizado for concluído, você poderá revisar o melhor modelo treinado.
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/23582234-766b-4aef-af15-774d218a4e02)
+
+Na guia Visão geral do trabalho de aprendizado de máquina automatizado, observe o melhor resumo do modelo.
+
+Selecione o texto em Nome do algoritmo para o melhor modelo para exibir seus detalhes.
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/82780641-eb9f-4554-8344-c29683690ace)
+
+Selecione a guia Métricas e selecione os gráficos de resíduos e predicted_true se ainda não estiverem selecionados.
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/a12f56df-1d2d-42c0-9b21-9f4e8a49ebb9)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/575ed0f9-131c-431d-8e5d-e69ce601e338)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/88d3f5c0-b30f-4ce3-bbea-78add71e9618)
+
+10. Analise os gráficos que mostram o desempenho do modelo. O gráfico de resíduos mostra os resíduos (as diferenças entre os valores previstos e reais) como um histograma. O gráfico predicted_true compara os valores previstos com os valores verdadeiros.
+
+# ✅ Implantar Modelo de Teste 
+
+Na guia Modelo para obter o melhor modelo treinado pelo seu trabalho de aprendizado de máquina automatizado, selecione Implantar e usar a opção Serviço Web para implantar o modelo com as seguintes configurações:
+      * Nome: predict-rentals
+      * Descrição: Prever aluguéis de ciclos
+      * Tipo de computação: Instância de Contêiner do Azure
+      * Habilitar autenticação: Selecionado
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/496b05a3-f86f-4095-965e-247ed17e92a3)
+
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/b8e70ccf-c78f-4324-86a9-96ad54903435)
+
+Aguarde o início da implantação, isso pode levar alguns segundos. O status de implantação para o ponto de extremidade de aluguel de previsão será indicado na parte principal da página como "Em execução".
+Aguarde até que o status "Implantar" seja alterado para "Bem-sucedido". Isso pode levar de 5 a 10 minutos.
+
+#🔎 Testar Modelo de Teste 
+
+Agora você pode testar seu serviço implantado.
+
+No estúdio do Aprendizado de Máquina do Azure, no menu à esquerda, selecione Pontos de extremidade e abra o ponto de extremidade em tempo real de aluguéis de previsão.
+![image](https://github.com/acdolive/DP01-Trabalhando-com-Machine-Learning-no-Azure-ML/assets/162451624/a7741cbb-0a59-405b-9d99-e6079b9e0e2a)
+
+Na página de ponto de extremidade em tempo real de aluguéis de previsão, exiba a guia Teste.
+
+No painel Dados de entrada para testar o ponto de extremidade, substitua o modelo JSON pelos seguintes dados de entrada:
+
 
